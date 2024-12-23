@@ -164,4 +164,65 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 specificationVersion: '0.19'
-common: []
+common:
+  - name: Blog
+    url: https://americanexpress.io/
+    type: Blog
+  - name: GitHub
+    url: https://github.com/americanexpress
+    type: GitHubOrganization
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/
+    type: Portal
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/support
+    type: Support
+  - name: Log In to My Account | American Express US
+    description: 'null'
+    url: >-
+      https://www.americanexpress.com/en-us/account/light/login?target=https://developer.americanexpress.com/login?redirect%3Dfalse
+    type: Login
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/signup
+    type: SignUp
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/documentation/getting-started
+    type: GettingStarted
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/documentation/whats-new
+    type: WhatsNew
+  - name: American Express Developers
+    description: 'null'
+    url: >-
+      https://developer.americanexpress.com/documentation/api-security/certificates
+    type: ' Certificates'
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/documentation/api-security/hmac
+    type: ' Certificates'
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/documentation/api-security/oauth-2
+    type: ' OAuth20'
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/faq
+    type: FAQ
+  - name: Terms of Service - American Express US
+    description: 'null'
+    url: >-
+      https://www.americanexpress.com/us/legal-disclosures/website-rules-and-regulations.html?inav=footer_Terms_of_Use
+    type: TermsOfService
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/terms
+    type: TermsOfService
+  - name: American Express Developers
+    description: 'null'
+    url: https://developer.americanexpress.com/products
+    type: Products
