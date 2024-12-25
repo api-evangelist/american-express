@@ -27,7 +27,7 @@ apis:
     name: American Express Account and Transaction API
     description: >-
       The Account and Transaction API enables access to Customer-authorized,
-      account-specific data for certain American Express� proprietary Card
+      account-specific data for certain American Express proprietary Card
       products including Personal, Small Business and Corporate Cards.
     humanURL: >-
       https://developer.americanexpress.com/products/account-and-transaction-api-public/overview
@@ -37,7 +37,7 @@ apis:
     name: American Express Confirmation of Funds PSD2 API
     description: >-
       The Confirmation of Funds PSD2 API provides Customer-authorized,
-      confirmation of available funds for certain American Express� proprietary
+      confirmation of available funds for certain American Express proprietary
       Card products including Personal, Small Business, and Corporate Cards.
     humanURL: >-
       https://developer.americanexpress.com/products/confirmation-of-funds/overview
@@ -124,11 +124,11 @@ apis:
     name: American Express AMEX Account Connect
     description: >-
       AMEX Account Connect is a suite of APIs that enables eligible American
-      Express� Card Members to add their Cards on file with participating
+      Express Card Members to add their Cards on file with participating
       Partners, using their American Express login credentials, instead of
       manually entering the Card information. There are two journeys available
       where the Card Member can begin the journey. A User can start from AMEX
-      channels, or from the Partners channel to link their eligible American
+      channels, or from the Partners channel to link their eligible American
       Express Card without needing the Card on-hand.
     humanURL: >-
       https://developer.americanexpress.com/products/nextgen-amex-account-connect/overview
@@ -137,7 +137,7 @@ apis:
   - aid: american-express:american-express-network-loyalty-platform
     name: American Express Network Loyalty Platform
     description: >-
-      The American Express� Network Loyalty Platform (the R42 Platform) is a
+      The American Express Network Loyalty Platform (the R42 Platform) is a
       suite of APIs that offer real-time Application Programming Interfaces
       (APIs) to Issuers and their Concierge Service Providers (a.k.a., Concierge
       Providers). The R42 Platform allows an Issuers Card Members to enroll in
