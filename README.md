@@ -1,5 +1,5 @@
 # American Express (american-express)
-Get Started. Our products are backed by a team of passionate American Express software developers who are adding new code regularly. With a robust set of tools and resources at your fingertips, this platform can help you create new experiences and services for your customers. 
+American Express is a financial services company that offers a wide range of products and services, including credit cards, charge cards, traveler's checks, and business services. Known for its exceptional customer service and unique rewards programs, American Express also provides insurance, investment services, and travel booking assistance to its customers. With a focus on luxury and exclusivity, American Express caters to high-net-worth individuals and businesses seeking premium financial solutions. Additionally, the company has expanded its offerings to include digital payment solutions and mobile banking services to meet the evolving needs of consumers in today's fast-paced world.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-search/american-express/refs/heads/main/apis.yml)
 
@@ -16,7 +16,7 @@ Get Started. Our products are backed by a team of passionate American Express so
 ## Timestamps
 
 - **Created:** 2024-11-15 
-- **Modified:** 2025-02-20 
+- **Modified:** 2025-02-24 
 
 ## APIs
 
@@ -28,7 +28,7 @@ The American Express Token Service (AETS) API is a powerful tool that allows dev
 
 #### Tags:
 
- - No Tags
+ - Credit Cards
 
 #### Properties
 
