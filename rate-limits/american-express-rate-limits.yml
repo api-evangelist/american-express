@@ -4,7 +4,8 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: American Express
 providerId: american-express
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Credit Cards
   - Financial Services
@@ -14,133 +15,32 @@ tags:
   - Rewards
   - Banking
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the American Express API surface. Captures per-tier
-  quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to
-  be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+description: >-
+  American Express does not publish public API rate limits for its developer products. Throughput, SLA, and concurrency are negotiated under each merchant or issuing-partner agreement. Reconcile if Amex publishes public rate-limit documentation.
+notes: >-
+  American Express developer APIs (Token Service / AETS, Enhanced Authorization, Account & Transaction) are partner-only. Access requires a merchant or issuing-partner agreement; pricing is embedded in the merchant discount rate / interchange and acquirer fees rather than a stand-alone API price. Rate limits and SLAs are governed per-contract and not published publicly. Reconcile if Amex publishes a public price list or rate-limit page.
+sources:
+  - https://developer.americanexpress.com/
+  - https://developer.americanexpress.com/products/amex-token-service/overview
 responseCodes:
   throttled: 429
-  quotaExceeded: 429
   serviceUnavailable: 503
 limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - American Express Token Service (AETS) API
-      - American Express Enhanced Authorization (EA)
-      - American Express Account and Transaction API
-      - American Express Confirmation of Funds PSD2 API
-      - American Express @ Work B2B API
-      - American Express Card On-Demand
-      - American Express Pay with Points
-      - American Express API-Based Payment Platform
-      - American Express Payment Account Reference (PAR)
-      - American Express Smart Offer Partnership
-      - American Express AMEX Account Connect
-      - American Express Network Loyalty Platform
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - American Express Token Service (AETS) API
-      - American Express Enhanced Authorization (EA)
-      - American Express Account and Transaction API
-      - American Express Confirmation of Funds PSD2 API
-      - American Express @ Work B2B API
-      - American Express Card On-Demand
-      - American Express Pay with Points
-      - American Express API-Based Payment Platform
-      - American Express Payment Account Reference (PAR)
-      - American Express Smart Offer Partnership
-      - American Express AMEX Account Connect
-      - American Express Network Loyalty Platform
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - American Express Token Service (AETS) API
-      - American Express Enhanced Authorization (EA)
-      - American Express Account and Transaction API
-      - American Express Confirmation of Funds PSD2 API
-      - American Express @ Work B2B API
-      - American Express Card On-Demand
-      - American Express Pay with Points
-      - American Express API-Based Payment Platform
-      - American Express Payment Account Reference (PAR)
-      - American Express Smart Offer Partnership
-      - American Express AMEX Account Connect
-      - American Express Network Loyalty Platform
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - American Express Token Service (AETS) API
-      - American Express Enhanced Authorization (EA)
-      - American Express Account and Transaction API
-      - American Express Confirmation of Funds PSD2 API
-      - American Express @ Work B2B API
-      - American Express Card On-Demand
-      - American Express Pay with Points
-      - American Express API-Based Payment Platform
-      - American Express Payment Account Reference (PAR)
-      - American Express Smart Offer Partnership
-      - American Express AMEX Account Connect
-      - American Express Network Loyalty Platform
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
+  - name: Undocumented - bilateral agreement
     scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - American Express Token Service (AETS) API
-      - American Express Enhanced Authorization (EA)
-      - American Express Account and Transaction API
-      - American Express Confirmation of Funds PSD2 API
-      - American Express @ Work B2B API
-      - American Express Card On-Demand
-      - American Express Pay with Points
-      - American Express API-Based Payment Platform
-      - American Express Payment Account Reference (PAR)
-      - American Express Smart Offer Partnership
-      - American Express AMEX Account Connect
-      - American Express Network Loyalty Platform
+    metric: varies
+    limit: 'see partner agreement; not publicly documented'
 policies:
+  - name: Documentation Status
+    description: >-
+      American Express does not publish public per-second or per-minute API rate
+      limits. Throughput, concurrency, and burst behavior are governed by the
+      relevant partner, supplier, or merchant agreement.
   - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+    description: >-
+      Where any HTTP API is exposed, clients should implement exponential
+      backoff with jitter and honor any Retry-After header returned on 429
+      or 503 responses.
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
