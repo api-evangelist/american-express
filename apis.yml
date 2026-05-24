@@ -298,6 +298,8 @@ common:
     url: https://github.com/americanexpress/targeted-offers-client
     title: JavaScript SDK
     name: Targeted Offers Client
+  - type: LLMsTxt
+    url: https://developer.americanexpress.com/llms.txt
 created: '2024-11-15'
 modified: '2026-04-19'
 position: Consumer
