@@ -2,12 +2,20 @@
   "repo": "american-express",
   "feeds": [
     {
+      "source": "https://americanexpress.io/feed.xml",
+      "feed_url": "https://americanexpress.io/feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://americanexpress.io/",
       "feed_url": "https://americanexpress.io/feed.xml",
-      "title": "American Express Technology",
-      "saved": 2
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "post_count": 13,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 14,
+  "fetched": "2026-06-01T23:35:02Z"
 }
