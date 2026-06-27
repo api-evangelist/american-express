@@ -221,7 +221,7 @@ common:
     type: Login
   - url: https://developer.americanexpress.com/signup
     name: American Express Developers
-    type: SignUp
+    type: Signup
   - url: https://developer.americanexpress.com/documentation/getting-started
     name: American Express Developers
     type: GettingStarted
@@ -295,11 +295,11 @@ common:
       description: Integration with enterprise resource planning and expense management systems via the At Work B2B API.
     - name: Loyalty Platform Providers
       description: Integration with third-party loyalty and offer platforms through the Smart Offer Partnership APIs.
-  - type: SDK
+  - type: SDKs
     url: https://github.com/americanexpress/targeted-offers-client
     title: JavaScript SDK
     name: Targeted Offers Client
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developer.americanexpress.com/llms.txt
 created: '2024-11-15'
 modified: '2026-04-19'
