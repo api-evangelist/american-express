@@ -1,43 +1,108 @@
 aid: american-express
 url: >-
   https://raw.githubusercontent.com/api-evangelist/american-express/refs/heads/main/apis.yml
+name: American Express
+kind: company
+type: Index
+description: >-
+  American Express is a globally integrated payments company and card network that
+  offers charge and credit cards, merchant acquiring, corporate payments, travel,
+  and Membership Rewards loyalty. Its developer platform at developer.americanexpress.com
+  publishes a partner-oriented catalog of REST APIs spanning tokenization (AETS),
+  fraud prevention (Enhanced Authorization), PSD2 open-banking account, transaction
+  and confirmation-of-funds services, corporate @ Work expense management, Pay with
+  Points redemption, Pay with Bank transfer payment initiation, Payment Account
+  Reference, card-linked Smart Offers, Account Connect card-on-file, and the R42
+  Network Loyalty Platform. Access is onboarding-gated for registered issuers,
+  merchants, acquirers, and partners rather than open self-service.
+tags:
+  - Credit Cards
+  - Financial Services
+  - Payments
+  - Card Network
+  - Tokenization
+  - Fraud Prevention
+  - Open Banking
+  - Rewards
+  - United States
+  - Fortune 100
+accessModel:
+  pricing: unknown
+  onboarding: partner-gated
+  trial: false
+  try_now: false
+  public: false
+  label: Partner-gated · Onboarding required
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-23'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-express.png
+access: 3rd-Party
+position: Consumer
+created: '2024-11-15'
+modified: '2026-07-23'
 apis:
   - aid: american-express:american-express-token-service-aets-api
     name: American Express Token Service (AETS) API
     tags:
+    - Tokenization
+    - Payments
+    - Security
     - Credit Cards
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/amex-token-service/resources#readme
     properties:
     - url: >-
         https://developer.americanexpress.com/products/amex-token-service/overview
       type: Documentation
+    - url: >-
+        https://developer.americanexpress.com/products/amex-token-service/resources#readme
+      type: APIReference
     description: >-
-      The American Express Token Service (AETS) API is a powerful tool that allows
-      developers to securely tokenize cardholder data, providing a layer of security
-      for online transactions. By generating unique tokens that represent a customer's
-      payment information, the API helps to reduce the risk of data breaches and fraud.
-      This technology works by replacing sensitive data with randomly generated tokens,
-      ensuring that the original payment details are never exposed during transactions.
+      The American Express Token Service (AETS) API allows developers to securely
+      tokenize cardholder data, providing a layer of security for online transactions.
+      By generating unique tokens that represent a customer's payment information, the
+      API helps reduce the risk of data breaches and fraud. This technology works by
+      replacing sensitive data with randomly generated network tokens, ensuring the
+      original payment details are never exposed during transactions or when stored
+      card-on-file across the American Express payment ecosystem.
   - aid: american-express:american-express-enhanced-authorization-ea-
     name: American Express Enhanced Authorization (EA)
-    tags: []
+    tags:
+    - Fraud Prevention
+    - Payments
+    - Risk
+    - Credit Cards
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/enhanced-authorization-v2/resources#readme
     properties:
     - url: >-
         https://www.americanexpress.com/content/dam/amex/us/merchant/pdf/enhancedauthorization_final.pdf
       type: Documentation
+    - url: >-
+        https://developer.americanexpress.com/products/enhanced-authorization-v2/resources#readme
+      type: APIReference
     description: >-
       American Express Enhanced Authorization (EA) is a fraud prevention tool that
       helps protect cardholders and merchants from unauthorized transactions. EA uses
-      advanced algorithms and machine learning technology to analyze transaction patterns
-      and detect any suspicious activity. This system enables American Express to
-      provide real-time authorization decisions, allowing them to quickly identify
-      and block potentially fraudulent transactions.
+      advanced algorithms and machine learning to analyze transaction patterns and
+      detect suspicious activity. By passing additional transaction data elements at
+      the time of authorization, this system enables American Express to provide
+      real-time authorization decisions, allowing them to quickly identify and block
+      potentially fraudulent transactions before they are approved.
   - aid: american-express:american-express-account-and-transaction-api
     name: American Express Account and Transaction API
-    tags: []
+    tags:
+    - Open Banking
+    - PSD2
+    - Data Access
+    - Payments
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/account-and-transaction-api-public/overview
     properties:
@@ -45,13 +110,21 @@ apis:
         https://developer.americanexpress.com/products/account-and-transaction-api-public/overview
       type: Documentation
     description: >-
-      The American Express Account and Transaction API is a powerful tool that enables
-      developers to access and retrieve detailed information about cardholder accounts
-      and transactions. With this API, users can securely retrieve data such as account
-      balance, transaction history, payment status, and more.
+      The American Express Account and Transaction API is an open-banking service that
+      enables regulated third-party providers to access and retrieve detailed
+      information about cardholder accounts and transactions with cardholder consent.
+      With this API, authorized users can securely retrieve data such as account
+      balance, transaction history, payment status, and account details under PSD2
+      account-information-service provisions, supporting financial data aggregation and
+      account-management use cases across the European regulatory perimeter.
   - aid: american-express:american-express-confirmation-of-funds-psd2-api
     name: American Express Confirmation of Funds PSD2 API
-    tags: []
+    tags:
+    - Open Banking
+    - PSD2
+    - Payments
+    - Data Access
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/confirmation-of-funds/overview
     properties:
@@ -60,13 +133,20 @@ apis:
       type: Documentation
     description: >-
       The American Express Confirmation of Funds PSD2 API is a secure and efficient
-      tool that enables businesses to verify the availability of funds in a customer's
-      account before completing a transaction. By integrating this API into their
-      payment processing systems, companies can reduce the risk of payment rejections
-      due to insufficient funds, thereby improving the overall customer experience.
+      service that enables regulated card-based payment instrument issuers to verify
+      the availability of funds in a customer's account before completing a transaction.
+      By integrating this API into their payment processing systems under PSD2's
+      confirmation-of-funds provisions, companies can reduce the risk of payment
+      rejections due to insufficient funds, thereby improving authorization rates and
+      the overall customer experience at checkout.
   - aid: american-express:american-express-work-b2b-api
     name: American Express @ Work B2B API
-    tags: []
+    tags:
+    - B2B
+    - Corporate Cards
+    - Expense Management
+    - Payments
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/at-work-apis-public/overview
     properties:
@@ -74,15 +154,21 @@ apis:
         https://developer.americanexpress.com/products/at-work-apis-public/overview
       type: Documentation
     description: >-
-      Sure! The American Express @ Work B2B API is a powerful tool that allows businesses
-      to easily and securely access their American Express corporate account information,
-      make payments, and manage their expenses in a streamlined and efficient manner.
-      With this API, businesses can automate various financial processes, such as
-      reconciling transactions, tracking spending, and generating reports, saving
-      time and reducing the risk of errors.
+      The American Express @ Work B2B API is a suite of services that allows businesses
+      to securely access their American Express corporate account information, make
+      payments, and manage expenses in a streamlined and efficient manner. With this
+      API, businesses can automate financial processes such as reconciling transactions,
+      retrieving statement and transaction data, tracking spending, and generating
+      reports, saving time and reducing the risk of manual errors across corporate card
+      and expense-management programs.
   - aid: american-express:american-express-card-on-demand
     name: American Express Card On-Demand
-    tags: []
+    tags:
+    - Digital Cards
+    - Issuing
+    - Payments
+    - Credit Cards
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/nextgen-card-on-demand/resources
     properties:
@@ -90,42 +176,66 @@ apis:
         https://developer.americanexpress.com/products/nextgen-card-on-demand/resources
       type: Documentation
     description: >-
-      American Express Card On-demand offers customers the convenience and flexibility
+      American Express Card On-Demand offers customers the convenience and flexibility
       of instantly receiving a digital card for their American Express account. This
-      innovative service allows cardholders to access their account information and
-      make purchases online without having to wait for a physical card to arrive in
-      the mail.
+      service allows eligible cardholders to access their account information and make
+      purchases online without having to wait for a physical card to arrive in the mail.
+      The API enables issuing partners to provision digital card credentials on demand,
+      supporting instant issuance and card-on-file provisioning at the point of account
+      creation or replacement.
   - aid: american-express:american-express-pay-with-points
     name: American Express Pay with Points
-    tags: []
+    tags:
+    - Loyalty
+    - Rewards
+    - Payments
+    - Membership Rewards
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/global-pay-with-points/resources#readme
     properties:
     - url: https://www.americanexpress.com/en-us/travel/how-to-pay-with-points/
       type: Documentation
+    - url: >-
+        https://developer.americanexpress.com/products/global-pay-with-points/resources#readme
+      type: APIReference
     description: >-
       American Express Pay with Points allows cardholders to use the points they have
       earned through their American Express Membership Rewards program to make purchases
-      at participating merchants. This feature provides flexibility and convenience
-      to cardholders, as they can choose to apply their points towards a variety of
-      expenses, such as travel, shopping, dining, and more.
+      at participating merchants. This Global Pay with Points API provides flexibility
+      and convenience to cardholders, letting them apply points toward a variety of
+      expenses such as travel, shopping, dining, and more directly at checkout, and
+      gives merchants and partners a programmatic way to offer real-time points
+      redemption within their own commerce flows.
   - aid: american-express:american-express-api-based-payment-platform
     name: American Express API-Based Payment Platform
-    tags: []
+    tags:
+    - Open Banking
+    - Payment Initiation
+    - PISP
+    - Payments
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/pay-with-bank-transfer-public/overview
     properties:
     - url: https://developer.americanexpress.com/documentation
       type: Documentation
     description: >-
-      The American Express API-based Payment Platform allows eCommerce Sellers and
-      Merchants to scale their business by integrating with the Open Banking enabled
-      Payment Gateways. The information in this guide is designed to help you implement
-      Pay with Bank transfer, an American Express Payment Initiation Service (PIS).
-      We have outlined the integration steps to give you a sense of what to expect.
+      The American Express API-based Payment Platform allows eCommerce sellers and
+      merchants to scale their business by integrating with Open Banking-enabled payment
+      gateways. The information in this product is designed to help implement Pay with
+      Bank transfer, an American Express Payment Initiation Service (PIS) operating under
+      PSD2. The integration steps outline how to initiate account-to-account bank
+      transfers as an alternative payment method at checkout, giving merchants a lower-cost
+      settlement rail alongside card acceptance.
   - aid: american-express:american-express-payment-account-reference-par-
     name: American Express Payment Account Reference (PAR)
-    tags: []
+    tags:
+    - Tokenization
+    - EMVCo
+    - Payments
+    - Card Network
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/payment-account-reference-public/overview
     properties:
@@ -133,16 +243,21 @@ apis:
         https://developer.americanexpress.com/products/payment-account-reference-public/overview
       type: Documentation
     description: >-
-      Payment Account Reference (PAR) provides an aggregated view of a Card
-      Members account activity across different payment formats. Developed by
-      EMV Co, it is a non-financial reference generated by American Express
-      Network Services that is associated with a Primary Account Number (PAN).
-      PAR links the PAN and associated tokens to allow acquirers and Merchants
-      to comply with their obligations and provide value-added services to Card
-      Members.
+      Payment Account Reference (PAR) provides an aggregated view of a Card Member's
+      account activity across different payment formats. Developed by EMVCo, it is a
+      non-financial reference generated by American Express Network Services that is
+      associated with a Primary Account Number (PAN). PAR links the PAN and its
+      associated network tokens to allow acquirers and merchants to comply with their
+      obligations and provide value-added services such as loyalty, analytics, and
+      fraud management to Card Members across tokenized and non-tokenized transactions.
   - aid: american-express:american-express-smart-offer-partnership
     name: American Express Smart Offer Partnership
-    tags: []
+    tags:
+    - Loyalty
+    - Offers
+    - Data Access
+    - Marketing
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/smart-offer-partnerships-public/overview
     properties:
@@ -150,14 +265,21 @@ apis:
         https://developer.americanexpress.com/products/smart-offer-partnerships-public/overview
       type: Documentation
     description: >-
-      The American Express Smart Offer Partnership product provides registered
-      Partners with access to certain American Express data, required to run
-      their card-linked offer and loyalty programs, via API and SFTP. Through
-      this product, Partners are able to access the transaction data of enrolled
-      Card Members from specific participating Merchants.
+      The American Express Smart Offer Partnership product provides registered partners
+      with access to certain American Express data required to run their card-linked
+      offer and loyalty programs, delivered via API and SFTP. Through this product,
+      partners are able to access the transaction data of enrolled Card Members from
+      specific participating merchants, enabling card-linked offer enrollment, statement
+      credits, targeted promotions, and closed-loop measurement of campaign performance
+      across the American Express network.
   - aid: american-express:american-express-amex-account-connect
     name: American Express AMEX Account Connect
-    tags: []
+    tags:
+    - Card-on-File
+    - Authentication
+    - Payments
+    - Credit Cards
+    - United States
     humanURL: >-
       https://developer.americanexpress.com/products/nextgen-amex-account-connect/overview
     properties:
@@ -165,94 +287,95 @@ apis:
         https://developer.americanexpress.com/products/nextgen-amex-account-connect/overview
       type: Documentation
     description: >-
-      AMEX Account Connect is a suite of APIs that enables eligible American
-      Express Card Members to add their Cards on file with participating
-      Partners, using their American Express login credentials, instead of
-      manually entering the Card information. There are two journeys available
-      where the Card Member can begin the journey. A User can start from AMEX
-      channels, or from the Partners channel to link their eligible American
-      Express Card without needing the Card on-hand.
+      AMEX Account Connect is a suite of APIs that enables eligible American Express Card
+      Members to add their Cards on file with participating partners, using their
+      American Express login credentials, instead of manually entering the Card
+      information. Two journeys are available: a User can begin from AMEX channels, or
+      from the partner's channel, to link their eligible American Express Card without
+      needing the physical Card on hand. This reduces friction, cart abandonment, and
+      card-entry errors while improving the security of stored credentials.
   - aid: american-express:american-express-network-loyalty-platform
     name: American Express Network Loyalty Platform
-    tags: []
+    tags:
+    - Loyalty
+    - Rewards
+    - Issuing
+    - Membership Rewards
+    - United States
     humanURL: https://developer.americanexpress.com/products/network-loyalty/overview
     properties:
     - url: >-
         https://developer.americanexpress.com/products/network-loyalty/overview
       type: Documentation
     description: >-
-      The American Express Network Loyalty Platform (the R42 Platform) is a
-      suite of APIs that offer real-time Application Programming Interfaces
-      (APIs) to Issuers and their Concierge Service Providers (a.k.a., Concierge
-      Providers). The R42 Platform allows an Issuers Card Members to enroll in
-      Elite - Tier Benefits and transfer points into a benefit providers loyalty
-      programs.
-name: American Express
-tags:
-  - Credit Cards
-  - Financial Services
-  - Payments
-  - Tokenization
-  - Fraud Prevention
-  - Rewards
-  - Banking
-  - Fortune 100
-type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-access: 3rd-Party
+      The American Express Network Loyalty Platform (the R42 Platform) is a suite of
+      real-time Application Programming Interfaces (APIs) offered to Issuers and their
+      Concierge Service Providers (a.k.a. Concierge Providers). The R42 Platform allows
+      an Issuer's Card Members to enroll in Elite-Tier Benefits and transfer points into
+      a benefit provider's loyalty programs, giving network issuers a programmatic way
+      to deliver premium benefits, points transfers, and tier management to their
+      cardholders across the American Express network.
 common:
-  - type: DomainSecurity
-    url: security/american-express-domain-security.yml
+  - type: Website
+    url: https://www.americanexpress.com/
+  - type: DeveloperPortal
+    url: https://developer.americanexpress.com/
+    name: American Express Developers
+  - type: Portal
+    url: https://developer.americanexpress.com/
+    name: American Express Developers
+  - type: Documentation
+    url: https://developer.americanexpress.com/documentation
+    name: American Express Developer Documentation
+  - type: Products
+    url: https://developer.americanexpress.com/products
+    name: American Express Developers
+  - type: Blog
+    url: https://americanexpress.io/
+    name: Blog
+  - type: GitHubOrganization
+    url: https://github.com/americanexpress
+    name: GitHub
   - type: LinkedIn
     url: https://www.linkedin.com/company/american-express
-  - url: https://americanexpress.io/
-    name: Blog
-    type: Blog
-  - url: https://github.com/americanexpress
-    name: GitHub
-    type: GitHubOrganization
-  - url: https://developer.americanexpress.com/
+  - type: Support
+    url: https://developer.americanexpress.com/support
     name: American Express Developers
-    type: Portal
-  - url: https://developer.americanexpress.com/support
+  - type: Signup
+    url: https://developer.americanexpress.com/signup
     name: American Express Developers
-    type: Support
-  - url: >-
+  - type: Login
+    url: >-
       https://www.americanexpress.com/en-us/account/light/login?target=https://developer.americanexpress.com/login?redirect%3Dfalse
     name: Log In to My Account | American Express US
-    type: Login
-  - url: https://developer.americanexpress.com/signup
+  - type: GettingStarted
+    url: https://developer.americanexpress.com/documentation/getting-started
     name: American Express Developers
-    type: Signup
-  - url: https://developer.americanexpress.com/documentation/getting-started
+  - type: WhatsNew
+    url: https://developer.americanexpress.com/documentation/whats-new
     name: American Express Developers
-    type: GettingStarted
-  - url: https://developer.americanexpress.com/documentation/whats-new
-    name: American Express Developers
-    type: WhatsNew
-  - url: >-
+  - type: Authentication
+    url: >-
       https://developer.americanexpress.com/documentation/api-security/certificates
+    name: API Security - Certificates
+  - type: Authentication
+    url: https://developer.americanexpress.com/documentation/api-security/hmac
+    name: API Security - HMAC
+  - type: Authentication
+    url: https://developer.americanexpress.com/documentation/api-security/oauth-2
+    name: API Security - OAuth 2
+  - type: FAQ
+    url: https://developer.americanexpress.com/faq
     name: American Express Developers
-    type: 'Authentication'
-  - url: https://developer.americanexpress.com/documentation/api-security/hmac
-    name: American Express Developers
-    type: 'Authentication'
-  - url: https://developer.americanexpress.com/documentation/api-security/oauth-2
-    name: American Express Developers
-    type: 'Authentication'
-  - url: https://developer.americanexpress.com/faq
-    name: American Express Developers
-    type: FAQ
-  - url: >-
+  - type: TermsOfService
+    url: >-
       https://www.americanexpress.com/us/legal-disclosures/website-rules-and-regulations.html?inav=footer_Terms_of_Use
     name: Terms of Service - American Express US
-    type: TermsOfService
-  - url: https://developer.americanexpress.com/terms
+  - type: TermsOfService
+    url: https://developer.americanexpress.com/terms
     name: American Express Developers
-    type: TermsOfService
-  - url: https://developer.americanexpress.com/products
-    name: American Express Developers
-    type: Products
+  - type: DomainSecurity
+    url: security/american-express-domain-security.yml
   - type: Features
     data:
     - name: Card Tokenization
@@ -260,7 +383,7 @@ common:
     - name: Fraud Prevention
       description: Real-time enhanced authorization using machine learning to detect and prevent fraudulent transactions before they are processed.
     - name: Open Banking APIs
-      description: PSD2-compliant account and transaction APIs enabling third-party providers to access cardholder data with consent for Open Banking use cases.
+      description: PSD2-compliant account, transaction, and confirmation-of-funds APIs enabling third-party providers to access cardholder data with consent for Open Banking use cases.
     - name: Pay with Points
       description: Global Pay with Points API enabling cardholders to redeem Membership Rewards points at checkout with participating merchants.
     - name: Network Loyalty Platform
@@ -301,17 +424,6 @@ common:
     url: https://github.com/americanexpress/targeted-offers-client
     title: JavaScript SDK
     name: Targeted Offers Client
-  - type: LlmsText
-    url: https://developer.americanexpress.com/llms.txt
-created: '2024-11-15'
-modified: '2026-04-19'
-position: Consumer
-description: >-
-  American Express is a financial services company that offers a wide range of products
-  and services, including credit cards, charge cards, traveler's checks, and business
-  services. Known for its exceptional customer service and unique rewards programs,
-  American Express also provides insurance, investment services, and travel booking
-  assistance to its customers.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
