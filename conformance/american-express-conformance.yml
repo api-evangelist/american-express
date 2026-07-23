@@ -1,0 +1,50 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.americanexpress.com/products
+description: >-
+  Cross-cutting and industry standards the American Express developer APIs align
+  with, asserted from the published product documentation and product framing (no
+  public OpenAPI is available to derive from). American Express is a global card
+  network and regulated payments company, so several standards are structural to
+  the products rather than optional.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: Amex API Security documentation documents OAuth 2.0 authorization (developer.americanexpress.com/documentation/api-security/oauth-2).
+  - id: mutual-tls
+    conforms: true
+    evidence: Two-way TLS client-certificate authentication is required and documented under API Security / Certificates.
+  - id: hmac-request-signing
+    conforms: true
+    evidence: HMAC/MAC request-signature authentication is documented under API Security / HMAC.
+  - id: psd2
+    conforms: true
+    evidence: >-
+      Account and Transaction API (AISP), Confirmation of Funds API (CBPII), and
+      the API-Based Payment Platform / Pay with Bank transfer (PISP) products are
+      built to PSD2 open-banking provisions for regulated third-party providers.
+  - id: emvco-payment-account-reference
+    conforms: true
+    evidence: >-
+      The Payment Account Reference (PAR) product implements the EMVCo Payment
+      Account Reference specification, linking PANs to network tokens.
+  - id: emvco-tokenization
+    conforms: true
+    evidence: >-
+      The American Express Token Service (AETS) issues EMVCo-style network tokens
+      that replace the PAN across the payment ecosystem.
+  - id: pci-dss
+    conforms: true
+    evidence: >-
+      As a global card network and card issuer, American Express operates under
+      PCI DSS; tokenization products (AETS) are positioned to reduce merchant PCI
+      scope.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No public OpenAPI or error reference available to confirm application/problem+json usage.
+  - id: fhir-r4
+    conforms: false
+  - id: scim
+    conforms: false
+  - id: odata
+    conforms: false

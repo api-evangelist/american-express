@@ -1,0 +1,21 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.americanexpress.com/documentation/whats-new
+description: >-
+  American Express publishes developer-platform updates on the "What's New" page
+  of the Amex for Developers documentation. The portal renders client-side and is
+  partner-gated, so a structured dated feed of individual entries is not exposed
+  publicly; this artifact points to the canonical What's New surface as the
+  changelog of record and records the versioning signal visible in the product
+  catalog (e.g. Enhanced Authorization v2).
+scheme: product-versioned
+changelog_url: https://developer.americanexpress.com/documentation/whats-new
+current_version: null
+entries: []
+notes:
+  - >-
+    Product versions are carried in the product path (e.g.
+    products/enhanced-authorization-v2), indicating per-product major versioning
+    rather than a single global API version.
+  - Individual dated entries are not machine-readable on the public portal; the
+    What's New page is the human-readable source of truth.

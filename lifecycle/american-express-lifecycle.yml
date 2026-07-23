@@ -1,0 +1,31 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.americanexpress.com/documentation
+description: >-
+  Versioning and lifecycle posture for the American Express developer platform,
+  captured from the Amex for Developers documentation. The platform is
+  partner-gated and renders client-side; no public OpenAPI, status page, or
+  formal deprecation policy is exposed on the anonymous surface.
+versioning:
+  scheme: product-path
+  note: >-
+    Major versions are carried in the product path (e.g.
+    products/enhanced-authorization-v2), so products version independently rather
+    than under one global API version.
+  docs: https://developer.americanexpress.com/documentation/whats-new
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public deprecation policy or RFC 8594 Sunset/Deprecation header support documented on the anonymous surface.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+changelog: https://developer.americanexpress.com/documentation/whats-new
+deprecated_operations: []
+notes:
+  - No public status page was found (status.americanexpress.com does not resolve;
+    developer.americanexpress.com/status returns the SPA shell, not a real status
+    dashboard), so no StatusPage pointer is emitted.
+  - No published deprecation policy on the anonymous surface, so no Deprecation
+    pointer is emitted.

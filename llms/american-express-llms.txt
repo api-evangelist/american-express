@@ -1,0 +1,43 @@
+# American Express
+
+> American Express is a globally integrated payments company and card network offering charge and credit cards, merchant acquiring, corporate payments, travel, and Membership Rewards loyalty. Its Amex for Developers platform (developer.americanexpress.com) publishes a partner-oriented catalog of REST APIs spanning tokenization, fraud prevention, PSD2 open banking, corporate expense management, points redemption, bank-transfer payment initiation, and network loyalty. Access is onboarding-gated for registered issuers, merchants, acquirers, and partners — there is no open self-service and no public OpenAPI. APIs are secured with mutual TLS, HMAC request signing, and OAuth 2.0.
+
+## APIs
+
+- [American Express Token Service (AETS) API](https://developer.americanexpress.com/products/amex-token-service/overview): Tokenize cardholder data with EMVCo-style network tokens for secure online and card-on-file transactions.
+- [Enhanced Authorization (EA)](https://developer.americanexpress.com/products/enhanced-authorization-v2/resources#readme): Fraud-prevention data enrichment passing extra transaction elements at authorization time for real-time risk decisions.
+- [Account and Transaction API](https://developer.americanexpress.com/products/account-and-transaction-api-public/overview): PSD2 AISP access to cardholder account and transaction data with consent.
+- [Confirmation of Funds PSD2 API](https://developer.americanexpress.com/products/confirmation-of-funds/overview): PSD2 CBPII funds-availability check before completing a transaction.
+- [@ Work B2B API](https://developer.americanexpress.com/products/at-work-apis-public/overview): Corporate card account, statement, transaction, and expense-management services.
+- [Card On-Demand](https://developer.americanexpress.com/products/nextgen-card-on-demand/resources): Instant digital card provisioning for issuing partners.
+- [Pay with Points](https://developer.americanexpress.com/products/global-pay-with-points/resources#readme): Global points redemption at checkout with participating merchants.
+- [API-Based Payment Platform (Pay with Bank transfer)](https://developer.americanexpress.com/products/pay-with-bank-transfer-public/overview): PSD2 PISP account-to-account bank-transfer payment initiation.
+- [Payment Account Reference (PAR)](https://developer.americanexpress.com/products/payment-account-reference-public/overview): EMVCo PAR linking PANs and network tokens across payment formats.
+- [Smart Offer Partnership](https://developer.americanexpress.com/products/smart-offer-partnerships-public/overview): Card-linked offer and loyalty data access via API and SFTP.
+- [AMEX Account Connect](https://developer.americanexpress.com/products/nextgen-amex-account-connect/overview): Card-on-file linking using American Express login credentials.
+- [Network Loyalty Platform (R42)](https://developer.americanexpress.com/products/network-loyalty/overview): Real-time APIs for issuers to manage elite-tier benefits and points transfers.
+
+## Documentation
+
+- [Developer Portal](https://developer.americanexpress.com/): Amex for Developers home.
+- [Documentation](https://developer.americanexpress.com/documentation): Platform documentation.
+- [Getting Started](https://developer.americanexpress.com/documentation/getting-started): Onboarding and first steps.
+- [What's New](https://developer.americanexpress.com/documentation/whats-new): Platform changelog / updates.
+- [API Security: Certificates (mTLS)](https://developer.americanexpress.com/documentation/api-security/certificates): Two-way TLS client-certificate authentication.
+- [API Security: HMAC](https://developer.americanexpress.com/documentation/api-security/hmac): HMAC/MAC request-signature authentication.
+- [API Security: OAuth 2](https://developer.americanexpress.com/documentation/api-security/oauth-2): OAuth 2.0 authorization.
+- [Support](https://developer.americanexpress.com/support): Developer support.
+- [FAQ](https://developer.americanexpress.com/faq): Frequently asked questions.
+
+## SDKs
+
+- [amex-api-java-client-core](https://github.com/americanexpress/amex-api-java-client-core): Java client for authenticating with Amex for Developers APIs.
+- [Amex.Api.Client.Core (.NET / NuGet)](https://www.nuget.org/packages/Amex.Api.Client.Core/): .NET client for authenticating with Amex for Developers APIs.
+- [amex-api-dotnet-client-core](https://github.com/americanexpress/amex-api-dotnet-client-core): Source for the .NET Amex authentication client.
+- [targeted-offers-client](https://github.com/americanexpress/targeted-offers-client): JavaScript SDK for the Targeted Offers (Smart Offer Partnership) API.
+
+## Optional
+
+- [GitHub Organization](https://github.com/americanexpress): American Express open-source organization.
+- [Terms of Service](https://developer.americanexpress.com/terms): Developer platform terms.
+- [Company Website](https://www.americanexpress.com/): American Express corporate site.

@@ -1,0 +1,34 @@
+generated: '2026-07-23'
+method: probed
+host: https://developer.americanexpress.com
+description: >-
+  The Amex for Developers portal is a single-page application that returns its
+  HTML shell (HTTP 200, content-type text/html) for every path, including all
+  /.well-known/ probes. None of the probed discovery documents are real machine-
+  readable resources, so no WellKnown/SecurityTxt pointer is wired. Recorded for
+  auditability; a raw HTML shell is not saved.
+documents:
+  - path: /.well-known/security.txt
+    status: 200
+    real: false
+    note: returns SPA HTML shell, not RFC 9116 security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    real: false
+    note: returns SPA HTML shell, not OIDC discovery JSON
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    real: false
+    note: returns SPA HTML shell, not RFC 8414 metadata
+  - path: /.well-known/api-catalog
+    status: 200
+    real: false
+    note: returns SPA HTML shell, not an API catalog
+  - path: /openapi.json
+    status: 200
+    real: false
+    note: returns SPA HTML shell, not an OpenAPI document
+other_hosts:
+  - host: https://www.americanexpress.com
+    path: /.well-known/security.txt
+    status: 404

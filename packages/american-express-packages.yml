@@ -1,0 +1,46 @@
+generated: '2026-07-23'
+method: searched
+source: https://github.com/americanexpress
+description: >-
+  First-party client libraries published by American Express for authenticating
+  with and consuming APIs on the Amex for Developers portal
+  (developer.americanexpress.com). These "client core" libraries implement the
+  two-way TLS + HMAC/OAuth request-signing the Amex developer APIs require, so
+  they are shared authentication SDKs rather than per-product clients. Only
+  genuinely first-party American Express packages are listed.
+packages:
+  - language: java
+    registry: github
+    name: amex-api-java-client-core
+    url: https://github.com/americanexpress/amex-api-java-client-core
+    install: "clone/build: https://github.com/americanexpress/amex-api-java-client-core"
+    description: Library for authenticating with APIs published to the Amex for Developers portal (Java).
+    official: true
+  - language: csharp
+    registry: nuget
+    name: Amex.Api.Client.Core
+    url: https://www.nuget.org/packages/Amex.Api.Client.Core/
+    install: dotnet add package Amex.Api.Client.Core
+    description: Library for authenticating with APIs published to the Amex for Developers portal (.NET). Authored by American Express Travel Related Services Company, Inc.
+    official: true
+  - language: csharp
+    registry: github
+    name: amex-api-dotnet-client-core
+    url: https://github.com/americanexpress/amex-api-dotnet-client-core
+    install: "clone/build: https://github.com/americanexpress/amex-api-dotnet-client-core"
+    description: Source repository for the .NET Amex for Developers authentication client core.
+    official: true
+  - language: javascript
+    registry: github
+    name: targeted-offers-client
+    url: https://github.com/americanexpress/targeted-offers-client
+    install: "clone/build: https://github.com/americanexpress/targeted-offers-client"
+    description: SDK for the American Express Targeted Offers (Smart Offer Partnership) API.
+    official: true
+notes:
+  - American Express also publishes many open-source engineering frameworks under
+    github.com/americanexpress (One App, Holocron, Iguazu, EarlyBird, Parrot, etc.);
+    those are not API client libraries for the developer platform and are excluded here.
+  - No first-party client library was found on npm, PyPI, RubyGems, Packagist,
+    crates.io, or pkg.go.dev; the Java/JS clients are distributed as source on GitHub
+    and the .NET client on NuGet.

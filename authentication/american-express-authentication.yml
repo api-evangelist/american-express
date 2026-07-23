@@ -1,0 +1,51 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.americanexpress.com/documentation/api-security
+docs:
+  - https://developer.americanexpress.com/documentation/api-security/certificates
+  - https://developer.americanexpress.com/documentation/api-security/hmac
+  - https://developer.americanexpress.com/documentation/api-security/oauth-2
+description: >-
+  American Express developer APIs are onboarding-gated and secured with a
+  layered scheme: mutual TLS (two-way client-certificate authentication),
+  request-level HMAC message authentication (MAC) signatures, and OAuth 2.0
+  bearer tokens for authorization. No public OpenAPI is published, so this
+  profile is captured from the Amex for Developers API Security documentation
+  rather than derived from a machine-readable spec.
+summary:
+  types: [mutualTLS, http, oauth2]
+  api_key_in: []
+  oauth2_flows: [clientCredentials]
+schemes:
+  - name: mutualTLS
+    type: mutualTLS
+    description: >-
+      Two-way TLS. Partners are issued client certificates during onboarding and
+      must present them on every API call; American Express validates the client
+      certificate alongside the server certificate.
+    docs: https://developer.americanexpress.com/documentation/api-security/certificates
+  - name: hmac
+    type: http
+    scheme: hmac
+    description: >-
+      HMAC / Message Authentication Code (MAC) request signing. Each request
+      carries an Authorization header containing an HMAC signature computed over
+      the request using the partner's issued MAC ID and secret, protecting
+      message integrity and authenticity.
+    docs: https://developer.americanexpress.com/documentation/api-security/hmac
+  - name: oauth2
+    type: oauth2
+    scheme: bearer
+    description: >-
+      OAuth 2.0 access tokens are used for authorization on APIs that require
+      them; tokens are obtained via the Amex token endpoint and presented as
+      bearer credentials. Scope and grant details are provisioned per partner
+      onboarding.
+    docs: https://developer.americanexpress.com/documentation/api-security/oauth-2
+    flows:
+      - flow: clientCredentials
+notes:
+  - Client SDKs (packages/american-express-packages.yml) implement the mTLS + HMAC
+    request-signing so partners do not hand-roll the signature.
+  - Access is partner-gated; credentials, certificates, and MAC secrets are issued
+    during onboarding rather than self-service.

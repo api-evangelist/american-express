@@ -374,8 +374,30 @@ common:
   - type: TermsOfService
     url: https://developer.americanexpress.com/terms
     name: American Express Developers
+  - type: PrivacyPolicy
+    url: >-
+      https://www.americanexpress.com/us/legal-disclosures/online-privacy-statement.html
+    name: Online Privacy Statement - American Express US
   - type: DomainSecurity
     url: security/american-express-domain-security.yml
+  - type: Authentication
+    url: authentication/american-express-authentication.yml
+    name: Authentication profile (mTLS + HMAC + OAuth 2.0)
+  - type: Packages
+    url: packages/american-express-packages.yml
+    name: Client libraries
+  - type: Conformance
+    url: conformance/american-express-conformance.yml
+    name: Standards conformance
+  - type: Lifecycle
+    url: lifecycle/american-express-lifecycle.yml
+    name: Versioning & lifecycle
+  - type: ChangeLog
+    url: https://developer.americanexpress.com/documentation/whats-new
+    name: What's New
+  - type: LLMsTxt
+    url: llms/american-express-llms.txt
+    name: llms.txt
   - type: Features
     data:
     - name: Card Tokenization
