@@ -9,13 +9,13 @@
       "method": "feed"
     },
     {
-      "source": "https://americanexpress.io/",
-      "feed_url": "https://americanexpress.io/feed.xml",
+      "source": "https://developer.americanexpress.com/products",
+      "feed_url": "https://developer.americanexpress.com/products",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "none"
     }
   ],
-  "post_count": 18,
-  "fetched": "2026-07-20T13:31:34Z"
+  "post_count": 19,
+  "fetched": "2026-08-01T15:49:00Z"
 }
