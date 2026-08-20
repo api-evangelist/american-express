@@ -17,6 +17,17 @@ description: >-
   merchants, acquirers, and partners rather than open self-service.
 tags:
   - Credit Cards
+  - Financial-Services
+  - Payments
+  - Card Network
+  - Tokenization
+  - Fraud Prevention
+  - Open Banking
+  - Rewards
+  - United States
+  - Fortune 100
+tags_raw:
+  - Credit Cards
   - Financial Services
   - Payments
   - Card Network
@@ -286,6 +297,12 @@ apis:
   - aid: american-express:american-express-amex-account-connect
     name: American Express AMEX Account Connect
     tags:
+    - Card on File
+    - Authentication
+    - Payments
+    - Credit Cards
+    - United States
+    tags_raw:
     - Card-on-File
     - Authentication
     - Payments
