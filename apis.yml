@@ -297,7 +297,7 @@ apis:
   - aid: american-express:american-express-amex-account-connect
     name: American Express AMEX Account Connect
     tags:
-    - Card on File
+    - Card-on-File
     - Authentication
     - Payments
     - Credit Cards
