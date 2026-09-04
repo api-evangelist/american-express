@@ -63,7 +63,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-express.png
 access: 3rd-Party
-position: Consumer
+position: Consuming
 created: '2024-11-15'
 modified: '2026-07-23'
 apis:
