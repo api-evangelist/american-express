@@ -1,0 +1,25 @@
+# Front Door AI Index — american-express — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: american-express
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.americanexpress.com
+  final_host: www.americanexpress.com
+  ownership: own
+  owner: american-express
+  shares_host_with:
+  - amex-bank-of-canada
+  inherited_from: null
+  verdict: silent
+  score: 0
+  host_score: 0
+  density: 0.0
+  words: 265
+  tiers:
+    agentic: 0
+    core: 0
+    model: 0
+  ambiguous: 0
+  top_terms: null

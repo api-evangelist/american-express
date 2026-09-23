@@ -1,7 +1,9 @@
 ---
 title: Ahead of earnings, Amex adds more tools to feed its AI plans
 url: https://www.americanbanker.com/payments/news/amex-agrees-to-buy-more-tools-to-feed-its-ai-plans
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Express" press release artificial intelligence'
 position: 5
 source: serpapi-google

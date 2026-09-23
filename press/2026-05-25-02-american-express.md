@@ -1,7 +1,9 @@
 ---
 title: American Express
 url: https://www.facebook.com/AmericanExpressUS/posts/were-excited-to-share-that-we-have-entered-into-an-agreement-to-acquire-hyper-an/1520164826138743/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Express" press release artificial intelligence'
 position: 2
 source: serpapi-google
