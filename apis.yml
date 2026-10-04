@@ -17,7 +17,7 @@ description: >-
   merchants, acquirers, and partners rather than open self-service.
 tags:
   - Credit Cards
-  - Financial-Services
+  - Financial Services
   - Payments
   - Card Network
   - Tokenization
@@ -37,6 +37,7 @@ tags_raw:
   - Rewards
   - United States
   - Fortune 100
+  - Financial-Services
 deliveryModel:
   model: saas
   open_source: false
@@ -95,6 +96,12 @@ apis:
   - aid: american-express:american-express-enhanced-authorization-ea-
     name: American Express Enhanced Authorization (EA)
     tags:
+    - Fraud Prevention
+    - Payments
+    - Risk Management
+    - Credit Cards
+    - United States
+    tags_raw:
     - Fraud Prevention
     - Payments
     - Risk
