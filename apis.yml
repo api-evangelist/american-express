@@ -351,6 +351,12 @@ apis:
       to deliver premium benefits, points transfers, and tier management to their
       cardholders across the American Express network.
 common:
+  - type: Plans
+    url: plans/american-express-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/american-express-rate-limits.yml
+  - type: FinOps
+    url: finops/american-express-finops.yml
   - type: Website
     url: https://www.americanexpress.com/
   - type: DeveloperPortal
