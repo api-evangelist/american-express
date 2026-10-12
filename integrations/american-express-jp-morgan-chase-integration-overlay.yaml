@@ -1,0 +1,19 @@
+# DERIVED by build-integration-preconfigs.py (roadmap#949). Overlay on the PARTNER's contract:
+# where jp-morgan-chase's enum names american-express, and what that value is.
+overlay: 1.0.0
+info:
+  title: american-express as a network in jp-morgan-chase's contract
+  version: 1.0.0
+extends: https://raw.githubusercontent.com/api-evangelist/jp-morgan-chase/refs/heads/main/openapi/jp-morgan-chase-ais-api-openapi.yml
+actions:
+- target: $.components.schemas.Account.properties.extra.properties.cardType
+  update:
+    x-apievangelist-integration:
+      values:
+        american_express:
+          provider: american-express
+          relationship: network
+          evidence: https://github.com/api-evangelist/jp-morgan-chase/blob/main/openapi/jp-morgan-chase-ais-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py

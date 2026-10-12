@@ -1,0 +1,46 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/american-express/integrations
+- https://n8n.io/integrations/american-express/
+- https://composio.dev/toolkits/american-express
+- https://monid.ai/tools/american-express
+checked:
+- https://composio.dev/toolkits/american-express
+- https://monid.ai/tools/american-express
+- https://n8n.io/integrations/american-express/
+- https://zapier.com/apps/american-express/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: jp-morgan-chase
+  partner: jp-morgan-chase
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: network
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/jp-morgan-chase/blob/main/openapi/jp-morgan-chase-ais-api-openapi.yml
+  contract_reference:
+    repo: jp-morgan-chase
+    spec_file: jp-morgan-chase-ais-api-openapi.yml
+    value: american_express
+    property: extra.cardType
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+- partner_name: revolut
+  partner: revolut
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: network
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/revolut/blob/main/openapi/revolut-payments-api-openapi.yml
+  contract_reference:
+    repo: revolut
+    spec_file: revolut-payments-api-openapi.yml
+    value: american_express
+    property: Card.card_brand
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates: []

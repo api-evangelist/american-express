@@ -1,0 +1,52 @@
+# DERIVED by build-integration-preconfigs.py (roadmap#949). Overlay on the PARTNER's contract:
+# where revolut's enum names american-express, and what that value is.
+overlay: 1.0.0
+info:
+  title: american-express as a network in revolut's contract
+  version: 1.0.0
+extends: https://raw.githubusercontent.com/api-evangelist/revolut/refs/heads/main/openapi/revolut-payments-api-openapi.yml
+actions:
+- target: $.components.schemas.Card.properties.card_brand
+  update:
+    x-apievangelist-integration:
+      values:
+        american_express:
+          provider: american-express
+          relationship: network
+          evidence: https://github.com/api-evangelist/revolut/blob/main/openapi/revolut-payments-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py
+- target: $.components.schemas['Revolut-Pay-Card'].properties.card_brand
+  update:
+    x-apievangelist-integration:
+      values:
+        american_express:
+          provider: american-express
+          relationship: network
+          evidence: https://github.com/api-evangelist/revolut/blob/main/openapi/revolut-payments-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py
+- target: $.components.schemas['Apple-Pay'].properties.card_brand
+  update:
+    x-apievangelist-integration:
+      values:
+        american_express:
+          provider: american-express
+          relationship: network
+          evidence: https://github.com/api-evangelist/revolut/blob/main/openapi/revolut-payments-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py
+- target: $.components.schemas['Google-Pay'].properties.card_brand
+  update:
+    x-apievangelist-integration:
+      values:
+        american_express:
+          provider: american-express
+          relationship: network
+          evidence: https://github.com/api-evangelist/revolut/blob/main/openapi/revolut-payments-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py
