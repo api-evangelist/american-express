@@ -9,6 +9,7 @@ checked:
 - https://composio.dev/toolkits/american-express
 - https://monid.ai/tools/american-express
 - https://n8n.io/integrations/american-express/
+- https://registry.financialdataexchange.org/
 - https://zapier.com/apps/american-express/integrations
 summary: null
 marketplace_apps: []
@@ -43,4 +44,28 @@ edges:
     property: Card.card_brand
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
+- partner_name: FDX (Financial Data Exchange)
+  partner: fdx
+  type: contract
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.financialdataexchange.org/
+  contract_reference:
+    register: FDX Registry
+    standard: FDX API
+    spec_file: null
+    register_api: https://registry.financialdataexchange.org/fdxregistryapi/organizations/search/listingTags
+    role: data-provider
+    member_type: MEMBER
+    registered_name: American Express
+    register_id: 112
+    registered_website: https://www.americanexpress.com
+    country: United States
+    fdx_version: null
+    matched_by: domain+name-among-holders:americanexpress.com
+    detected_by: sweep-fdx.py
+    detected: '2026-10-14'
+  detected_by: sweep-fdx.py
+  first_seen: '2026-10-14'
 templates: []

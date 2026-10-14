@@ -39,3 +39,29 @@
     detected: '2026-10-12'
   status: not-a-workflow
   arazzo: null
+- slug: american-express-fdx-financial-data-exchange
+  label: FDX (Financial Data Exchange)
+  partner: fdx
+  partner_name: FDX (Financial Data Exchange)
+  type: contract
+  channel: standard-directory
+  evidence: https://registry.financialdataexchange.org/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: FDX Registry
+    standard: FDX API
+    spec_file: null
+    register_api: https://registry.financialdataexchange.org/fdxregistryapi/organizations/search/listingTags
+    role: data-provider
+    member_type: MEMBER
+    registered_name: American Express
+    register_id: 112
+    registered_website: https://www.americanexpress.com
+    country: United States
+    fdx_version: null
+    matched_by: domain+name-among-holders:americanexpress.com
+    detected_by: sweep-fdx.py
+    detected: '2026-10-14'
+  status: not-a-workflow
+  arazzo: null
