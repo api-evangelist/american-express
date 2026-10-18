@@ -11,6 +11,7 @@ checked:
 - https://n8n.io/integrations/american-express/
 - https://registry.financialdataexchange.org/
 - https://zapier.com/apps/american-express/integrations
+- slack/integrations/slack-integration-edges.yml
 summary: null
 marketplace_apps: []
 edges:
@@ -68,4 +69,21 @@ edges:
     detected: '2026-10-14'
   detected_by: sweep-fdx.py
   first_seen: '2026-10-14'
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/A0C588RMP0D-amex-expense
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Amex Expense
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 templates: []
