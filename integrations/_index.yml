@@ -78,3 +78,30 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: american-express-mas-financial-institutions-directory
+  label: MAS Financial Institutions Directory
+  partner_name: MAS Financial Institutions Directory
+  category: open finance (Singapore)
+  type: register
+  channel: regulator-register
+  evidence: https://eservices.mas.gov.sg/fid
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: MAS Financial Institutions Directory
+    spec_file: null
+    standard: MAS licensing (Banking Act / Payment Services Act, Singapore)
+    role: licensed-participant
+    registrations:
+    - registered_name: AMERICAN EXPRESS INTERNATIONAL INC.
+      licences:
+      - Credit and Charge Card Licensee
+      matched_domain: americanexpress.com
+      matched_by: domain+name-among-holders
+      evidence: https://eservices.mas.gov.sg/fid/institution/detail/3057-AMERICAN-EXPRESS-INTERNATIONAL-INC
+      register_id: 3057-AMERICAN-EXPRESS-INTERNATIONAL-INC
+    signal_note: 'participation only: a regulator licence; no API conformance is published by this register'
+    detected_by: sweep-gulf-asean-open-finance.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
