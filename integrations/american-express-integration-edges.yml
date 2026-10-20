@@ -16,6 +16,7 @@ checked:
 - https://www.ojk.go.id/id/kanal/iknb/data-dan-statistik/direktori/fintech/Default.aspx
 - https://zapier.com/apps/american-express/integrations
 - slack/integrations/slack-integration-edges.yml
+- https://listings.pcisecuritystandards.org/assessors_and_solutions
 summary: null
 marketplace_apps: []
 edges:
@@ -49,6 +50,23 @@ edges:
     property: Card.card_brand
     detected_by: detect-payment-method-edges.py
     detected: '2026-10-12'
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/A0C588RMP0D-amex-expense
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Amex Expense
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 - partner_name: FDX (Financial Data Exchange)
   partner: fdx
   type: contract
@@ -70,26 +88,9 @@ edges:
     fdx_version: null
     matched_by: domain+name-among-holders:americanexpress.com
     detected_by: sweep-fdx.py
-    detected: '2026-10-14'
+    detected: '2026-10-19'
   detected_by: sweep-fdx.py
-  first_seen: '2026-10-14'
-- partner_name: Slack (own)
-  partner: slack
-  partner_match: mirror
-  mirror_match: domain+name-among-holders
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://slack.com/marketplace/A0C588RMP0D-amex-expense
-  mirror_of: slack/integrations/slack-integration-edges.yml
-  apps:
-  - Amex Expense
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Slack app
+  first_seen: '2026-10-19'
 - partner_name: MAS Financial Institutions Directory
   partner: null
   partner_match: register
@@ -117,4 +118,36 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-gulf-asean-open-finance.py
   first_seen: '2026-10-18'
+- partner_name: PCI Security Standards Council (program listings)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://listings.pcisecuritystandards.org/assessors_and_solutions/payment_applications
+  category: Payment security validation
+  contract_reference:
+    register: PCI SSC program listings (listings.pcisecuritystandards.org / pcisecuritystandards.org)
+    spec_file: null
+    standard: PCI SSC
+    role: pci-validated-vendor
+    registered_name: American Express (TRS)
+    website: home.americanexpress.com
+    matched_domain: americanexpress.com
+    matched_by: domain+name-among-holders
+    identity_source: the vendor website on the PCI SSC listing (no lookup)
+    certified_products:
+    - product: PA-DSS Validated Payment Application
+      lapsed: true
+      latest_expiry: '2011-03-02'
+      listed: 1
+    signal_note: one certified_products entry per PCI SSC program (Secure Software, PA-DSS, P2PE solution / component
+      / application, 3DS SDK, SPoC, CPoC, MPoC, PTS device, Secure SLC); lapsed = every listed product in that program
+      is past its expiry / reassessment date or marked expired; `listed` is context only. List Access Agreement
+      accepted on Kin's instruction 2026-10-20
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  detected_by: sweep-compliance-assurance.py
+  first_seen: '2026-10-20'
 templates: []

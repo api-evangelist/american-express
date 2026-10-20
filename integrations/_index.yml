@@ -39,6 +39,19 @@
     detected: '2026-10-12'
   status: not-a-workflow
   arazzo: null
+- slug: american-express-slack-own
+  label: Slack (own)
+  partner: slack
+  partner_name: Slack (own)
+  category: Slack app
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://slack.com/marketplace/A0C588RMP0D-amex-expense
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: american-express-fdx-financial-data-exchange
   label: FDX (Financial Data Exchange)
   partner: fdx
@@ -62,20 +75,7 @@
     fdx_version: null
     matched_by: domain+name-among-holders:americanexpress.com
     detected_by: sweep-fdx.py
-    detected: '2026-10-14'
-  status: not-a-workflow
-  arazzo: null
-- slug: american-express-slack-own
-  label: Slack (own)
-  partner: slack
-  partner_name: Slack (own)
-  category: Slack app
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://slack.com/marketplace/A0C588RMP0D-amex-expense
-  source: edge
-  relationship: platform-app
+    detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
 - slug: american-express-mas-financial-institutions-directory
@@ -103,5 +103,37 @@
     signal_note: 'participation only: a regulator licence; no API conformance is published by this register'
     detected_by: sweep-gulf-asean-open-finance.py
     detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
+- slug: american-express-pci-security-standards-council-program-listings
+  label: PCI Security Standards Council (program listings)
+  partner_name: PCI Security Standards Council (program listings)
+  category: Payment security validation
+  type: register
+  channel: standard-directory
+  evidence: https://listings.pcisecuritystandards.org/assessors_and_solutions/payment_applications
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: PCI SSC program listings (listings.pcisecuritystandards.org / pcisecuritystandards.org)
+    spec_file: null
+    standard: PCI SSC
+    role: pci-validated-vendor
+    registered_name: American Express (TRS)
+    website: home.americanexpress.com
+    matched_domain: americanexpress.com
+    matched_by: domain+name-among-holders
+    identity_source: the vendor website on the PCI SSC listing (no lookup)
+    certified_products:
+    - product: PA-DSS Validated Payment Application
+      lapsed: true
+      latest_expiry: '2011-03-02'
+      listed: 1
+    signal_note: one certified_products entry per PCI SSC program (Secure Software, PA-DSS, P2PE solution / component
+      / application, 3DS SDK, SPoC, CPoC, MPoC, PTS device, Secure SLC); lapsed = every listed product in that program
+      is past its expiry / reassessment date or marked expired; `listed` is context only. List Access Agreement
+      accepted on Kin's instruction 2026-10-20
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
