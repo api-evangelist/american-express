@@ -23,6 +23,16 @@ checked:
 - https://www.cnv.gov.ar/SitioWeb/RegistrosPublicos/Agentes
 - https://www.cnv.gov.ar/SitioWeb/RegistrosPublicos/Psav
 - https://www.coelsa.com.ar/
+- https://agentic.market
+- https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources
+- https://app.ampersend.ai/discover
+- https://docs.cdp.coinbase.com/x402/
+- https://docs.x402.org/dev-tools/facilitators
+- https://pay.sh
+- https://www.x402.org/ecosystem
+- https://x402-list.com
+- https://x402.org/members/
+- https://x402scan.com
 summary: null
 marketplace_apps: []
 edges:
@@ -187,4 +197,29 @@ edges:
   detected_by: sweep-argentina-fintech-registers.py
   first_seen: '2026-10-21'
   partner_tier: Adherente Partner
+- partner_name: x402 Foundation
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://x402.org/members/
+  category: x402 protocol foundation membership
+  partner_tier: premier
+  contract_reference:
+    register: x402 Foundation members (x402.org/members/, Linux Foundation project)
+    standard: x402
+    spec_file: null
+    role: x402-foundation-member
+    registered_name: American Express
+    register_id: http://americanexpress.com
+    matched_domain: americanexpress.com
+    matched_by: domain+name-among-holders
+    signal_note: 'participation only: foundation membership (logo wall linking each member''s website); the membership
+      class is partner_tier; membership is not conformance'
+    detected_by: sweep-x402-micropayments.py
+    detected: '2026-10-21'
+  detected_by: sweep-x402-micropayments.py
+  first_seen: '2026-10-21'
 templates: []

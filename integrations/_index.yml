@@ -167,3 +167,27 @@
     detected: '2026-10-21'
   status: not-a-workflow
   arazzo: null
+- slug: american-express-x402-foundation
+  label: x402 Foundation
+  partner_name: x402 Foundation
+  category: x402 protocol foundation membership
+  type: register
+  channel: standard-directory
+  evidence: https://x402.org/members/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: x402 Foundation members (x402.org/members/, Linux Foundation project)
+    standard: x402
+    spec_file: null
+    role: x402-foundation-member
+    registered_name: American Express
+    register_id: http://americanexpress.com
+    matched_domain: americanexpress.com
+    matched_by: domain+name-among-holders
+    signal_note: 'participation only: foundation membership (logo wall linking each member''s website); the membership
+      class is partner_tier; membership is not conformance'
+    detected_by: sweep-x402-micropayments.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
