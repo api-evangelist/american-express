@@ -17,6 +17,12 @@ checked:
 - https://zapier.com/apps/american-express/integrations
 - slack/integrations/slack-integration-edges.yml
 - https://listings.pcisecuritystandards.org/assessors_and_solutions
+- https://camarafintech.org/miembros/
+- https://www.bcra.gob.ar/entidades-financieras/
+- https://www.bcra.gob.ar/registro-de-proveedores-de-servicios-de-pago/
+- https://www.cnv.gov.ar/SitioWeb/RegistrosPublicos/Agentes
+- https://www.cnv.gov.ar/SitioWeb/RegistrosPublicos/Psav
+- https://www.coelsa.com.ar/
 summary: null
 marketplace_apps: []
 edges:
@@ -150,4 +156,35 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: Cámara Argentina Fintech (member list)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://camarafintech.org/miembros/
+  category: Argentine fintech industry association membership
+  contract_reference:
+    register: Cámara Argentina Fintech (member list)
+    spec_file: null
+    standard: null
+    role: camara-fintech-member
+    registrations:
+    - registered_name: Amex
+      licences:
+      - Cámara Argentina Fintech member
+      register_country: AR
+      matched_domain: americanexpress.com
+      matched_by: domain+local-verified
+      register_id: camarafintech.org socio 1293
+      categories:
+      - medios-de-pago-emision-y-pago
+    signal_note: 'participation only: membership of the national fintech association (listing is not conformance;
+      the member tier is carried in partner_tier)'
+    detected_by: sweep-argentina-fintech-registers.py
+    detected: '2026-10-21'
+  detected_by: sweep-argentina-fintech-registers.py
+  first_seen: '2026-10-21'
+  partner_tier: Adherente Partner
 templates: []

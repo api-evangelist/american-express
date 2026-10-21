@@ -137,3 +137,33 @@
     detected: '2026-10-20'
   status: not-a-workflow
   arazzo: null
+- slug: american-express-c-mara-argentina-fintech-member-list
+  label: Cámara Argentina Fintech (member list)
+  partner_name: Cámara Argentina Fintech (member list)
+  category: Argentine fintech industry association membership
+  type: register
+  channel: standard-directory
+  evidence: https://camarafintech.org/miembros/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Cámara Argentina Fintech (member list)
+    spec_file: null
+    standard: null
+    role: camara-fintech-member
+    registrations:
+    - registered_name: Amex
+      licences:
+      - Cámara Argentina Fintech member
+      register_country: AR
+      matched_domain: americanexpress.com
+      matched_by: domain+local-verified
+      register_id: camarafintech.org socio 1293
+      categories:
+      - medios-de-pago-emision-y-pago
+    signal_note: 'participation only: membership of the national fintech association (listing is not conformance;
+      the member tier is carried in partner_tier)'
+    detected_by: sweep-argentina-fintech-registers.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
