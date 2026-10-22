@@ -191,3 +191,108 @@
     detected: '2026-10-21'
   status: not-a-workflow
   arazzo: null
+- slug: american-express-eba-payment-institutions-register-psd2-emd2
+  label: EBA Payment Institutions Register (PSD2 / EMD2)
+  partner_name: EBA Payment Institutions Register (PSD2 / EMD2)
+  category: EU/EEA PSD2 payment / e-money authorisation
+  type: register
+  channel: regulator-register
+  evidence: https://euclid.eba.europa.eu/register/pir/search
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: EBA Payment Institutions Register (PSD2 / EMD2)
+    spec_file: null
+    standard: null
+    role: authorised-payment-or-e-money-institution
+    registrations:
+    - registered_name: AMERICAN EXPRESS EUROPE, S.A.
+      licences:
+      - payment institution
+      register_country: ES
+      register_id: ES_BE!6837
+      matched_domain: null
+      matched_by: register-name
+      authorised: '2019-03-15'
+      competent_authority: ES_BE
+      national_ref: '6837'
+      home_services:
+      - PS_03A
+      - PS_03B
+      - PS_04A
+      - PS_04B
+      - PS_05A
+      passports:
+      - AT
+      - BE
+      - BG
+      - CY
+      - CZ
+      - DE
+      - DK
+      - EE
+      - FI
+      - FR
+      - GR
+      - HR
+      - HU
+      - IE
+      - IS
+      - IT
+      - LI
+      - LT
+      - LU
+      - LV
+      - MT
+      - NL
+      - 'NO'
+      - PL
+      - PT
+      - RO
+      - SE
+      - SI
+      - SK
+      register_name_note: register-name 'americanexpress' = american-express; wikidata P856 americanexpress.ae,
+        americanexpress.ch, americanexpress.com, americanexpress.com.bh, americanexpress.com.qa, americanexpress.com.tr
+        agrees or unheld
+    matched_by: register-name
+    signal_note: 'participation only: a regulator authorisation / registration and its PSD2 passports (host countries);
+      no API conformance is published by this register'
+    detected_by: sweep-eu-psd2-payment-institutions.py
+    detected: '2026-10-21'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: american-express-fdic-bankfind-insured-institutions
+  label: FDIC BankFind insured institutions
+  partner_name: FDIC BankFind insured institutions
+  category: US FDIC-insured depository institution charter
+  type: register
+  channel: regulator-register
+  evidence: https://api.fdic.gov/banks/institutions?filters=ACTIVE:1&fields=NAME,WEBADDR,CERT,ASSET,STALP
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: FDIC BankFind insured institutions
+    spec_file: null
+    standard: null
+    role: insured-depository-institution
+    registrations:
+    - registered_name: American Express National  Bank
+      register_status: active
+      register_country: US
+      register_id: '27471'
+      matched_domain: americanexpress.com
+      matched_by: domain+name-among-holders
+      licences:
+      - FDIC-insured institution (CERT 27471)
+      evidence_url: https://banks.data.fdic.gov/bankfind-suite/bankfind/details/27471
+      state: UT
+    signal_note: 'participation only: a federal deposit-insurance charter on a regulator register; no API conformance
+      is published by this register'
+    detected_by: sweep-us-bank-credit-union-registers.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
