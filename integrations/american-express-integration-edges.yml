@@ -40,6 +40,10 @@ checked:
 - https://api.fdic.gov/banks/institutions?filters=ACTIVE:1&fields=NAME,WEBADDR,CERT,ASSET,STALP
 - https://www.ncua.gov/files/publications/analysis/call-report-data-2025-06.zip
 - https://www.ncua.gov/files/publications/analysis/federally-insured-credit-union-list-june-2025.zip
+- https://github.com/finos/<repo>/blob/HEAD/MAINTAINERS.md
+- https://landscape.finos.org/data/full.json
+- https://raw.githubusercontent.com/finos/finos-landscape/e926c0ba0e77896a0718eb29b4f33ba5c210f335/landscape.yml
+- https://www.finos.org/members
 summary: null
 marketplace_apps: []
 edges:
@@ -333,5 +337,30 @@ edges:
     detected_by: sweep-us-bank-credit-union-registers.py
     detected: '2026-10-22'
   detected_by: sweep-us-bank-credit-union-registers.py
+  first_seen: '2026-10-22'
+- partner_name: FINOS (membership)
+  partner: finos
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: FINOS membership
+  evidence: https://www.finos.org/members
+  channel: standard-directory
+  relationship: standard-participant
+  partner_tier: Gold
+  contract_reference:
+    register: FINOS members (www.finos.org/members)
+    spec_file: null
+    standard: FINOS
+    role: finos-member
+    registered_name: American Express
+    website: https://www.americanexpress.com/
+    matched_domain: americanexpress.com
+    matched_by: domain+name-among-holders
+    signal_note: 'participation only: FINOS membership is standard-participant evidence, not depth. The tier (partner_tier)
+      is CONTEXT, never counted'
+    detected_by: sweep-finos-open-source-fintech.py
+    detected: '2026-10-22'
+  detected_by: sweep-finos-open-source-fintech.py
   first_seen: '2026-10-22'
 templates: []
