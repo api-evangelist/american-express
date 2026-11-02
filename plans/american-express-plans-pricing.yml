@@ -1,0 +1,66 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: American Express
+providerId: american-express
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Credit Cards
+  - Financial Services
+  - Payments
+  - Tokenization
+  - Fraud Prevention
+  - Rewards
+  - Banking
+description: >-
+  American Express does not sell its developer APIs (AETS Token Service, Enhanced Authorization, Account & Transaction) under a public price list. Costs are embedded in the standard merchant discount / interchange model and acquirer agreements; partner SDK access is granted to merchants and issuers under bilateral terms. Reconcile if Amex publishes stand-alone API pricing.
+notes: >-
+  American Express developer APIs (Token Service / AETS, Enhanced Authorization, Account & Transaction) are partner-only. Access requires a merchant or issuing-partner agreement; pricing is embedded in the merchant discount rate / interchange and acquirer fees rather than a stand-alone API price. Rate limits and SLAs are governed per-contract and not published publicly. Reconcile if Amex publishes a public price list or rate-limit page.
+sources:
+  - https://developer.americanexpress.com/
+  - https://developer.americanexpress.com/products/amex-token-service/overview
+plans:
+  - id: american-express-overview
+    name: American Express - Pricing Overview
+    type: enterprise
+    description: >-
+      Placeholder plan reflecting that American Express does not publish a public,
+      machine-readable API price list. Pricing is bespoke per engagement.
+    entries:
+      - label: API Access
+        name: api_access
+        type: flat
+        metric: varies
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: Negotiated Access
+      - name: Bilateral Agreement
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  plans:
+  - name: American Express - Pricing Overview
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - per-use
